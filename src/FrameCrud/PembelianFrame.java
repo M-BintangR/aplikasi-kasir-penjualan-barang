@@ -28,8 +28,10 @@ public class PembelianFrame extends javax.swing.JFrame {
         this.recordTable();
         this.setEnableComponent();
         this.getTanggal();
+        this.inputKodeBarang.removeAllItems();
         this.relasiBarang();
         this.setDefaultComponent();
+        
     }
     
     private void setEnableComponent(){
@@ -88,6 +90,7 @@ public class PembelianFrame extends javax.swing.JFrame {
         this.rs = this.stat.executeQuery();
         
         while(rs.next()){
+            
             this.inputHargaSatuan.setText(rs.getString("harga_barang"));
         }
        }catch(Exception e){
@@ -96,8 +99,7 @@ public class PembelianFrame extends javax.swing.JFrame {
     }
      
     public void getKodeBarang(){
-         String[]  kBarang;
-        
+        String[]  kBarang;
         kBarang = this.inputKodeBarang.getSelectedItem().toString().split(":");
         this.kodeBarang = kBarang[0].toString();
     }
@@ -307,6 +309,12 @@ public class PembelianFrame extends javax.swing.JFrame {
         jLabel5.setText("Masukkan Jumlah Barang");
 
         jLabel6.setText("Harga Satuan");
+
+        inputKodeBarang.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                inputKodeBarangActionPerformed(evt);
+            }
+        });
 
         jLabel7.setText("Diskon");
 
@@ -547,6 +555,11 @@ public class PembelianFrame extends javax.swing.JFrame {
        
         // TODO add your handling code here:
     }//GEN-LAST:event_inputMemberActionPerformed
+
+    private void inputKodeBarangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputKodeBarangActionPerformed
+        this.relasiBarang();
+        // TODO add your handling code here:
+    }//GEN-LAST:event_inputKodeBarangActionPerformed
 
     /**
      * @param args the command line arguments
