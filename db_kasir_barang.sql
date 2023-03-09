@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2023-03-08 07:42:55
+Date: 2023-03-10 07:29:57
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -25,12 +25,13 @@ CREATE TABLE `tbl_barang` (
   `nama_barang` varchar(35) NOT NULL,
   `harga_barang` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- ----------------------------
 -- Records of tbl_barang
 -- ----------------------------
-INSERT INTO `tbl_barang` VALUES ('1', '001001', 'Kondom', '20000');
+INSERT INTO `tbl_barang` VALUES ('3', '100001', 'Mebel Kursi', '1000000');
+INSERT INTO `tbl_barang` VALUES ('4', '100002', 'Mebel Meja ', '1500000');
 
 -- ----------------------------
 -- Table structure for `tbl_pembeli`
@@ -47,12 +48,11 @@ CREATE TABLE `tbl_pembeli` (
   `total_harga` double NOT NULL,
   `tanggal_beli` date NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- ----------------------------
 -- Records of tbl_pembeli
 -- ----------------------------
-INSERT INTO `tbl_pembeli` VALUES ('6', 'Fery Fadul Cabul Bgt', '001001', '10', '20000', '2000.0', 'ya', '198000', '2023-03-08');
 
 -- ----------------------------
 -- Table structure for `tbl_users`

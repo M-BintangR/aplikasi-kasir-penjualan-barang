@@ -28,7 +28,6 @@ public class PembelianFrame extends javax.swing.JFrame {
         this.recordTable();
         this.setEnableComponent();
         this.getTanggal();
-        this.inputKodeBarang.removeAllItems();
         this.relasiBarang();
         this.setDefaultComponent();
         
